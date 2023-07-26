@@ -18,12 +18,23 @@ h1[id="pricingHead"] {
   text-align: center;
 }
 
+[id="row_price"] {
+  display: flex;
+  width: 80%;
+  margin: 0 auto 50px auto;
+  justify-content: space-between;
+}
+
+[id="card_col"] {
+  /* margin-left: 3%; */
+  /* border: 2px solid red; */
+  /* justify-content: center; */
+}
 [id="card"] {
   height: 400px;
+  width: 320px;
 
-  overflow: hidden;
-  flex-grow: 1;
-
+  position: relative;
   border-radius: 15px;
   padding: 20px;
   border: 2px solid #f2f2f2;
@@ -60,7 +71,6 @@ h1[id="pricingHead"] {
 [id="point_stack"] {
   margin-top: 20px;
   text-align: left;
-  height: 150px;
 }
 [id="point"] {
   font-size: 14px;
@@ -71,6 +81,8 @@ h1[id="pricingHead"] {
 [id="btn"] {
   background-color: #222;
   margin-top: 10px;
+  position: absolute;
+  bottom: 2rem;
   box-shadow: 0 0.7065919983928324px 0.7065919983928324px -0.625px #00000026,
     0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025,
     0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023,
@@ -296,5 +308,34 @@ td {
   }
   [id="card"] {
     margin-top: 25px;
+  }
+}
+@media (max-width: 1439px) {
+  [id="row_price"] {
+    width: 90%;
+  }
+  [id="point"] {
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  [id="price"] {
+    font-size: 40px;
+  }
+  [id="card_col"] {
+  }
+  [id="card"] {
+    margin-top: 25px;
+    height: 450px;
+  }
+  [id="durance"] {
+    margin-top: 35px;
+  }
+}
+@media (max-width: 1100px) {
+  [id="row_price"] {
+    width: 100%;
+  }
+  [id="durance"] {
+    margin-top: 35px;
   }
 }

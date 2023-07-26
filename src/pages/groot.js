@@ -258,31 +258,33 @@ export default function Groot() {
             </div>
             <div className='col col--2 '></div>
           </div>
-          <div className={`row`}>
+          <div className={`row`} id='row_price'>
             {obj?.map((item) => (
-              <div className='col col--4 '>
+              <div
+                className='col col--4 '
+                id='card_col'
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}>
                 <div id='card'>
-                  <div className={`styles.card`}>
-                    <div id='card_header'>{item.name}</div>
-                    <div id='price_row'>
-                      <div id='price'>{item.price}</div>
-                      <div id='durance'>{item.durance}</div>
-                    </div>
-
-                    <ul id='point_stack' as='ul'>
-                      {item.points.map((p) => (
-                        <li id='point' as='li'>
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <button
-                      className='button  button--md umami--click'
-                      id='btn'>
-                      {item.btn}
-                    </button>
+                  <div id='card_header'>{item.name}</div>
+                  <div id='price_row'>
+                    <div id='price'>{item.price}</div>
+                    <div id='durance'>{item.durance}</div>
                   </div>
+
+                  <ul id='point_stack' as='ul'>
+                    {item.points.map((p) => (
+                      <li id='point' as='li'>
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button className='button  button--md umami--click' id='btn'>
+                    {item.btn}
+                  </button>
                 </div>
               </div>
             ))}
