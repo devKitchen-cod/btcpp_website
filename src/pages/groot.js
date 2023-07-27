@@ -21,8 +21,8 @@ function Cross(props) {
 export default function Groot() {
   const obj = [
     {
-      name: "Free",
-      price: "$0",
+      name: "Basic",
+      price: "Free",
       durance: "",
       points: [
         "Full Behavior Tree Editor",
@@ -34,11 +34,11 @@ export default function Groot() {
     },
     {
       name: "PRO (floating license)",
-      price: "$900",
-      durance: "year",
+      price: "€790",
+      durance: " / year",
       points: [
         "Search Nodes in large trees",
-        "Unlimited Number of Nodes  ",
+        "Unlimited Number of Nodes in Monitor and Log Visualizer",
         "Interactive real-time debugging",
         "Technical support",
       ],
@@ -49,6 +49,7 @@ export default function Groot() {
       price: "Contact us",
       durance: "",
       points: [
+        "All the features in PRO",
         "Access to the source code",
         "Site license with unlimited number of seats.",
       ],
@@ -166,7 +167,7 @@ export default function Groot() {
                 <li>Compatible with both BT.CPP 3 and 4</li>
                 <li>Split view to visualize multiple trees at once.</li>
                 <li>Preview the XML in real-time.</li>
-                <li>Node Search capability (PRO)</li>
+                <li>Search Nodes in large trees (PRO)</li>
               </ul>
               <br />
             </div>
@@ -234,30 +235,13 @@ export default function Groot() {
         </div>
       </div>
 
+      <div
+        className={`${styles.sectionSeparator} container`}>
+        Pricing
+      </div>  
+
       <div className={`styles.sectionText`}>
         <div className={`container `}>
-          <div className='row'>
-            <div className='col col--2 '></div>
-            <div className='col col--8 '>
-              <h1 id='pricingHead'>Our commitment to the community</h1>
-              <ul>
-                <li id='text'>
-                  <span id='text_head'>Free for researcher:</span> if you are a
-                  student or researcher, you can get a receive a complementary 1
-                  year license, filling this form.
-                </li>
-
-                <li id='text'>
-                  <span id='text_head'> Source code escrow:</span> if we can't
-                  support anymore the development of Groot2, its source code
-                  will be released open source under the Apache License, Version
-                  2.0
-                </li>
-              </ul>
-              <br />
-            </div>
-            <div className='col col--2 '></div>
-          </div>
           <div className={`row`} id='row_price'>
             {obj?.map((item) => (
               <div
@@ -289,13 +273,38 @@ export default function Groot() {
               </div>
             ))}
           </div>
+          <div className='row'>
+            <div className='col col--2 '></div>
+            <div className='col col--8 '>
+              <h1 id='pricingHead'>Our commitment to the community</h1>
+              <ul>
+                <li id='text'>
+                  <span id='text_head'>Free for researchers:</span> if you are a
+                  student or researcher, you can receive a complementary 1
+                  year license. Fill this form to tell us more about you.
+                </li>
+
+                <li id='text'>
+                  <span id='text_head'> Source code escrow:</span> if Auryn Robotics,
+                  the company behind Groot2, becomes unable to support and maintain it, 
+                  its source code will be released open source under the Apache License, Version 2.0.
+                </li>
+              </ul>
+              <br />
+            </div>
+            <div className='col col--2 '></div>
+          </div>
         </div>
       </div>
       {/* groot download  */}
       <div
+        className={`${styles.sectionSeparator} container`}>
+        Download
+      </div>  
+
+      <div
         className={`${styles.sectionText} container ${styles.flexCol} gap-5 `}>
-        <h1>Download Groot 2</h1>
-        <h3>Version: 1.0.1 (Released 2023-07-07)</h3>
+        <h3>Latest release: 1.0.1 (2023-07-07)</h3>
         <div className={styles.downloadGroup}>
           <div>
             <img

@@ -20,7 +20,7 @@ h1[id="pricingHead"] {
 
 [id="row_price"] {
   display: flex;
-  width: 80%;
+  width: 85%;
   margin: 0 auto 50px auto;
   justify-content: space-between;
 }
@@ -46,24 +46,24 @@ h1[id="pricingHead"] {
   font-size: 23px;
   font-weight: 600;
   line-height: 1.5em;
-  color: rgb(102, 102, 102);
+  color: rgb(73, 73, 73);
 }
 [id="price_row"] {
   display: flex;
 }
 [id="durance"] {
-  margin-top: 45px;
+  margin-top: 30px;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.5em;
-  color: rgb(102, 102, 102);
+  color: rgb(73, 73, 73);
 }
 [id="price"] {
   margin-top: 20px;
   font-family: "Inter", "Inter Placeholder", sans-serif;
-  font-size: 54px;
-  font-weight: 700;
+  font-size: 46px;
+  font-weight: 600;
   letter-spacing: -3px;
   line-height: 1em;
   color: rgb(21, 193, 79);
@@ -73,10 +73,10 @@ h1[id="pricingHead"] {
   text-align: left;
 }
 [id="point"] {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
-  line-height: 2.5em;
-  color: rgb(102, 102, 102);
+  line-height: 2.0em;
+  color: rgb(73, 73, 73);
 }
 [id="btn"] {
   background-color: #222;
@@ -115,7 +115,7 @@ h3 {
 }
 
 .sectionText {
-  padding: 0.5rem 20px;
+  padding: 0.5rem 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,27 +126,29 @@ h3 {
 .sectionText:first-child {
   margin-top: 40px;
 }
+
+.sectionText h1 {
+  font-size: 42px;
+}
+
 .sectionText h3 {
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .sectionText li {
-  font-size: 16px;
-}
-
-.sectionTable {
-  padding: 0.5rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #3b3b3b;
   font-size: 20px;
 }
 
-.sectionTable li {
-  list-style-type: none;
-  font-size: 16px;
+.sectionSeparator {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(21, 193, 79);
+  font-weight: 700;
+  font-size: 48px;
 }
+
 
 table,
 th,
