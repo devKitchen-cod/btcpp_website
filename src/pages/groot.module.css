@@ -43,6 +43,8 @@ h1[id="pricingHead"] {
 }
 
 [id="card_header"] {
+  display: flex;
+  justify-content: center;
   font-size: 23px;
   font-weight: 600;
   line-height: 1.5em;
@@ -50,6 +52,7 @@ h1[id="pricingHead"] {
 }
 [id="price_row"] {
   display: flex;
+  justify-content: center;
 }
 [id="durance"] {
   margin-top: 30px;
@@ -79,7 +82,10 @@ h1[id="pricingHead"] {
   color: rgb(73, 73, 73);
 }
 [id="btn"] {
-  background-color: #222;
+  /* background-color: #222; */
+  /* text-align: center; */
+  /* justify-content: center; */
+  /* margin-left: 20%; */
   margin-top: 10px;
   position: absolute;
   bottom: 2rem;
@@ -90,10 +96,30 @@ h1[id="pricingHead"] {
     0 13.646761411524492px 13.646761411524492px -3.125px #0000001b,
     0 30px 30px -3.75px #0000000d;
 }
-:hover[id="btn"] {
+/* :hover[id="btn"] {
   color: #222;
   background-color: #dfdcdc;
   transition: 1s;
+} */
+
+[id="card_download"] {
+  height: 200px;
+  width: 320px;
+
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid #f2f2f2;
+  background: #fafafa;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 5%);
+}
+:hover[id="card_download"] {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+[id="hero__title"]{
+  text-align: center;
+  color: #0dbb5b;
 }
 
 h2 {

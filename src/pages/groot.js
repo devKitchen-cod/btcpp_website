@@ -109,6 +109,12 @@ export default function Groot() {
     mootrack("loadForm", "419144d798774876bcfcd1e1f0b6a2ad");
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <Layout title='Groot' description='Groot Editor'>
       {/* groot intro */}
@@ -128,7 +134,9 @@ export default function Groot() {
         <div className='container '>
           <div className='row align-items-center'>
             <div className='col col--5'>
-              <h1 className='hero__title '>Groot2</h1>
+              <h1 className='hero__title ' id='hero__title'>
+                Groot2
+              </h1>
               <p className='hero__subtitle'>
                 The IDE to create and debug Behavior Trees.
               </p>
@@ -143,6 +151,12 @@ export default function Groot() {
                   className='button button--primary button--lg umami--click--signup-button'
                   onClick={openPopup}>
                   Keep me up to date
+                </button>
+                <button
+                  onClick={() => scrollToSection("section1")}
+                  data-mooform-id='419144d7-9877-4876-bcfc-d1e1f0b6a2ad'
+                  className='button button--primary button--lg umami--click--signup-button'>
+                  Download
                 </button>
               </div>
             </div>
@@ -235,10 +249,7 @@ export default function Groot() {
         </div>
       </div>
 
-      <div
-        className={`${styles.sectionSeparator} container`}>
-        Pricing
-      </div>  
+      <div className={`${styles.sectionSeparator} container`}>Pricing</div>
 
       <div className={`styles.sectionText`}>
         <div className={`container `}>
@@ -265,10 +276,18 @@ export default function Groot() {
                       </li>
                     ))}
                   </ul>
-
-                  <button className='button  button--md umami--click' id='btn'>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <button
+                      id='btn'
+                      data-mooform-id='419144d7-9877-4876-bcfc-d1e1f0b6a2ad'
+                      className='button button--primary button--md umami--click--signup-button'
+                      onClick={openPopup}>
+                      {item.btn}
+                    </button>
+                  </div>
+                  {/* <button className='button  button--md umami--click' id='btn'>
                     {item.btn}
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}
@@ -280,14 +299,15 @@ export default function Groot() {
               <ul>
                 <li id='text'>
                   <span id='text_head'>Free for researchers:</span> if you are a
-                  student or researcher, you can receive a complementary 1
-                  year license. Fill this form to tell us more about you.
+                  student or researcher, you can receive a complementary 1 year
+                  license. Fill this form to tell us more about you.
                 </li>
 
                 <li id='text'>
-                  <span id='text_head'> Source code escrow:</span> if Auryn Robotics,
-                  the company behind Groot2, becomes unable to support and maintain it, 
-                  its source code will be released open source under the Apache License, Version 2.0.
+                  <span id='text_head'> Source code escrow:</span> if Auryn
+                  Robotics, the company behind Groot2, becomes unable to support
+                  and maintain it, its source code will be released open source
+                  under the Apache License, Version 2.0.
                 </li>
               </ul>
               <br />
@@ -297,16 +317,15 @@ export default function Groot() {
         </div>
       </div>
       {/* groot download  */}
-      <div
-        className={`${styles.sectionSeparator} container`}>
+      <div id='section1' className={`${styles.sectionSeparator} container`}>
         Download
-      </div>  
+      </div>
 
       <div
         className={`${styles.sectionText} container ${styles.flexCol} gap-5 `}>
         <h3>Latest release: 1.0.1 (2023-07-07)</h3>
         <div className={styles.downloadGroup}>
-          <div>
+          <div id='card_download' style={{textAlign: 'center'}}>
             <img
               className={styles.downloadLogo}
               src={useBaseUrl("img/windows.png")}
@@ -318,7 +337,7 @@ export default function Groot() {
               Download Windows installer
             </Link>
           </div>
-          <div>
+          <div id='card_download' style={{textAlign: 'center'}}>
             <img
               className={styles.downloadLogo}
               src={useBaseUrl("img/linux.png")}
@@ -330,13 +349,14 @@ export default function Groot() {
               Download Linux installer
             </Link>
           </div>
-          <div>
+          <div id='card_download' style={{textAlign: 'center'}}>
             <img
               className={styles.downloadLogo}
               src={useBaseUrl("img/appimage.png")}
               alt='appimage logo'
             />
             <Link
+            // style={{marginLeft: '20px'}}
               onclick="fathom.trackGoal('DIQDUTJ2', 0);"
               to='https://s3.us-west-1.amazonaws.com/download.behaviortree.dev/groot2_linux_installer/Groot2-v1.0.1-x86_64.AppImage'>
               Download AppImage (Linux)
