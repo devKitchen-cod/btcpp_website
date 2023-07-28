@@ -131,14 +131,6 @@ h3 {
   font-size: 24px;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-  [id="card"] {
-    margin-top: 25px;
-  }
-}
 
 .sectionText {
   padding: 0.5rem 30px;
@@ -247,7 +239,8 @@ td {
 .buttonGroup {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
 }
 
 .downloadGroup {
@@ -295,6 +288,37 @@ td {
 }
 .whitespaceNoWrap {
   white-space: nowrap;
+}
+[id="t1"]{
+  display: none;
+}
+[id="t3"]{
+  display: none;
+}
+
+@media screen and (max-width: 996px) {
+  [id="t2"]{
+    display: none;
+  }
+  [id="t1"]{
+    display: block;
+  }
+  [id="t4"]{
+    display: none;
+  }
+  [id="t3"]{
+    display: block;
+  }
+  .heroBanner {
+    padding: 2rem;
+  }
+  
+  .buttonGroup{
+    margin-bottom: 25px;
+  }
+  [id="card"] {
+    margin-top: 25px;
+  }
 }
 
 @media (max-width: 767px) {

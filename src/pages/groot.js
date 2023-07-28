@@ -133,7 +133,7 @@ export default function Groot() {
       <div className={clsx("hero hero--dark", styles.heroBanner)}>
         <div className='container '>
           <div className='row align-items-center'>
-            <div className='col col--5'>
+            <div className='col col--6' style={{ textAlign: "center" }}>
               <h1 className='hero__title ' id='hero__title'>
                 Groot2
               </h1>
@@ -160,7 +160,7 @@ export default function Groot() {
                 </button>
               </div>
             </div>
-            <div className='col col--7'>
+            <div className='col col--6'>
               <img src={useBaseUrl("img/groot2.png")} />
             </div>
           </div>
@@ -170,10 +170,22 @@ export default function Groot() {
       <div className={`styles.sectionText`}>
         <div className={`container text--left ${styles.sectionText}`}>
           <div className='row'>
+            <div className='col col--5' id="t1">
+              <h1>BT Editor</h1>
+              <ul>
+                <li>Create and edit trees, using a drag and drop interface.</li>
+                <li>Manage large projects and multiple files.</li>
+                <li>Compatible with both BT.CPP 3 and 4</li>
+                <li>Split view to visualize multiple trees at once.</li>
+                <li>Preview the XML in real-time.</li>
+                <li>Search Nodes in large trees (PRO)</li>
+              </ul>
+              <br />
+            </div>
             <div className='col col--7'>
               <video src={EditorVideo} muted loop autoPlay width='100%'></video>
             </div>
-            <div className='col col--5'>
+            <div className='col col--5' id="t2">
               <h1>BT Editor</h1>
               <ul>
                 <li>Create and edit trees, using a drag and drop interface.</li>
@@ -225,10 +237,27 @@ export default function Groot() {
       <div className={`styles.sectionText`}>
         <div className={`container text--left ${styles.sectionText}`}>
           <div className='row'>
+          <div className='col col--5' id="t3">
+              <h1>Log Visualization</h1>
+              <ul>
+                <li>
+                  Open logs and replay the execution of the tree at different
+                  speeds.
+                </li>
+                <li>
+                  Visualize how long a Node has been in the RUNNING state.
+                </li>
+                <li>
+                  View and export statistics about the number of times Nodes
+                  returned a status.
+                </li>
+              </ul>
+              <br />
+            </div>
             <div className='col col--7'>
               <video src={LogVideo} muted loop autoPlay width='100%'></video>
             </div>
-            <div className='col col--5'>
+            <div className='col col--5' id="t4">
               <h1>Log Visualization</h1>
               <ul>
                 <li>
@@ -325,7 +354,7 @@ export default function Groot() {
         className={`${styles.sectionText} container ${styles.flexCol} gap-5 `}>
         <h3>Latest release: 1.0.1 (2023-07-07)</h3>
         <div className={styles.downloadGroup}>
-          <div id='card_download' style={{textAlign: 'center'}}>
+          <div id='card_download' style={{ textAlign: "center" }}>
             <img
               className={styles.downloadLogo}
               src={useBaseUrl("img/windows.png")}
@@ -337,7 +366,7 @@ export default function Groot() {
               Download Windows installer
             </Link>
           </div>
-          <div id='card_download' style={{textAlign: 'center'}}>
+          <div id='card_download' style={{ textAlign: "center" }}>
             <img
               className={styles.downloadLogo}
               src={useBaseUrl("img/linux.png")}
@@ -349,14 +378,14 @@ export default function Groot() {
               Download Linux installer
             </Link>
           </div>
-          <div id='card_download' style={{textAlign: 'center'}}>
+          <div id='card_download' style={{ textAlign: "center" }}>
             <img
               className={styles.downloadLogo}
               src={useBaseUrl("img/appimage.png")}
               alt='appimage logo'
             />
             <Link
-            // style={{marginLeft: '20px'}}
+              // style={{marginLeft: '20px'}}
               onclick="fathom.trackGoal('DIQDUTJ2', 0);"
               to='https://s3.us-west-1.amazonaws.com/download.behaviortree.dev/groot2_linux_installer/Groot2-v1.0.1-x86_64.AppImage'>
               Download AppImage (Linux)
