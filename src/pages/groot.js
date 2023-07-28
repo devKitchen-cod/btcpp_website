@@ -19,6 +19,19 @@ function Cross(props) {
   return <img src={useBaseUrl("img/cross.png")} width='15' alt='no' />;
 }
 export default function Groot() {
+
+  const handleClickBasic = () => {
+    console.log('free')
+    scrollToSection('section1')
+  }
+  const handleClickProL = () => {
+    console.log('ProL')
+    window.open('https://www.google.com/', '_blank')
+  }
+  const handleClickPro = () => {
+    console.log('Pro')
+    window.location.href = 'mailto:example@example.com'
+  }
   const obj = [
     {
       name: "Basic",
@@ -31,6 +44,7 @@ export default function Groot() {
         "Not for commercial use",
       ],
       btn: "Download",
+      onclick:() => handleClickBasic()
     },
     {
       name: "PRO (floating license)",
@@ -43,6 +57,7 @@ export default function Groot() {
         "Technical support",
       ],
       btn: "Licensing page",
+      onclick: () => handleClickProL()
     },
     {
       name: "PRO (source code)",
@@ -54,6 +69,7 @@ export default function Groot() {
         "Site license with unlimited number of seats.",
       ],
       btn: "Contact us",
+      onclick:() => handleClickPro()
     },
   ];
   console.log(obj);
@@ -310,7 +326,7 @@ export default function Groot() {
                       id='btn'
                       data-mooform-id='419144d7-9877-4876-bcfc-d1e1f0b6a2ad'
                       className='button button--primary button--md umami--click--signup-button'
-                      onClick={openPopup}>
+                      onClick={item.onclick}>
                       {item.btn}
                     </button>
                   </div>
